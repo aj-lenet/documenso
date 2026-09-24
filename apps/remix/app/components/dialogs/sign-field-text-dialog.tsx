@@ -34,7 +34,7 @@ export const SignFieldTextDialog = createCallable<SignFieldTextDialogProps, stri
   const form = useForm<TSignFieldTextFormSchema>({
     resolver: zodResolver(ZSignFieldTextFormSchema),
     defaultValues: {
-      text: '',
+      text: fieldMeta?.text ?? '',
     },
   });
 
